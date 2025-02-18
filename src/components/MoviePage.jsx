@@ -8,7 +8,6 @@ const MoviePage = ({URL}) => {
   const [isLoading,setIsLoading] = useState(true)
     const [page,setPage] = useState(1)
     const data = getRequest(`${URL}?language=en-US&page=${page}&key=${KEY}`,page,setIsLoading)
-    console.log(data.results);
     function handlePaginationChange(val) {
       setPage(val)
       setIsLoading(true)
