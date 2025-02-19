@@ -31,7 +31,7 @@ export default function Menu() {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar position="static" className='!bg-green-500'>
                     <Toolbar>
                         <IconButton
                             onClick={() => setOpenDrawer(!openDrawer)}
@@ -58,7 +58,16 @@ export default function Menu() {
                             onInput={(e) => handleSearch(e)}
                             size='small'
                             options={filmsData}
-                            sx={{ width: 300 }}
+                            sx={{width: 300,
+                                color: 'white',
+                                '& .MuiInputLabel-root': { color: 'white' },
+                                '& .MuiOutlinedInput-root': { color: 'white','& fieldset': { borderColor: 'white' },
+                                '&:hover fieldset': { borderColor: 'white' },
+                                '&.Mui-focused fieldset': { borderColor: 'white' },
+                                },
+                                '& .MuiInputBase-input': { color: 'white' },
+                                '& .MuiSvgIcon-root': { color: 'white' },
+                              }}
                             renderInput={(params) => <TextField {...params} placeholder='Search...' />}
                         />
                     </Toolbar>

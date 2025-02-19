@@ -52,7 +52,7 @@ function Media(props) {
 Media.propTypes = {
   loading: PropTypes.bool,
 };
-const list = [1,2,3,4,5]
+const list = [1,2,3,4,5,6]
 export default function MovieSkeleton() {
   return (
     <div className='flex flex-wrap gap-5 px-10 justify-center mt-8'>
