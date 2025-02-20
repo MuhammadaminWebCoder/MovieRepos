@@ -14,8 +14,7 @@ export default function DrawerCustom() {
     
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={() => setOpenDrawer(!openDrawer)}>
-      <List>
-        {NavbarMenuList.map((text) => (
+      <List>{NavbarMenuList.map((text) => (
           <ListItem key={text.id} disablePadding>
             <ListItemButton className='cursor-pointer' onClick={() => setOpenDrawer(false)}>
               <Link to={text.path}><ListItemText primary={text.value} /></Link>
@@ -27,10 +26,6 @@ export default function DrawerCustom() {
   );
 
   return (
-    <div>
-      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        {DrawerList}
-      </Drawer>
-    </div>
+    <div><Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>{DrawerList}</Drawer></div>
   );
 }
